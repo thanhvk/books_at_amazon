@@ -1,0 +1,30 @@
+<div *ngIf=book class="container">
+  <div class="book-item">
+    <div class="row">
+      <div class="col-md-3 book-image-wrapper">
+        <a [routerLink]="['/detail', book.id]">
+          <img class="book-image" [src]="book.image_url" [alt]="book.title">
+        </a>
+      </div>
+      <div class="col-md-6 book-content-wrapper">
+        <h1 class="book-title">
+          {{book.title}} <span class="book-category">{{book.category}}</span>
+        </h1>
+        <p>by <a href="#">{{book.author}}</a></p>
+        <p class="book-description">{{book.description}}</p>
+        <app-customer-review-modal [bookId]="book.id" (addReviewSuccessEvent)="handleAddReviewSuccess($event)"></app-customer-review-modal>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-xs-7">
+        <h4>Customer reviews</h4>
+        <div *ngFor="let review of book.reviews" class="book-review">
+          <p class="review-content">{{review.content}}</p>
+          <p class="review-info">By <a href="#" class="customer">{{review.customer}}</a> on <span class="date">{{review.date | date:"longDate"}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

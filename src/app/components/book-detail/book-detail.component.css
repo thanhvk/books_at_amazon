@@ -1,0 +1,26 @@
+.book-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.book-item .book-image {
+    width: 100%;
+}
+
+.book-item .book-title {
+    font-size: 20px;
+}
+
+.book-item .book-category {
+    font-size: 16px;
+    color: #555;
+}
+
+.book-item .book-description {
+    font-size: 14px;
+}
+
+.book-review .review-content {
+    margin-bottom: 5px;
+}
+

@@ -1,0 +1,27 @@
+<button class="btn btn-default btn-review" (click)="openModal(template)">Write a customer review</button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">{{title}}</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form #reviewForm="ngForm">
+            <div class="form-group">
+                <label for="custuomer">Name</label>
+                <input type="email" class="form-control" name="customer" id="customer" placeholder="Your name" required #customer="ngModel"
+                    [(ngModel)]="review.customer">
+                <p [hidden]="customer.valid || customer.pristine" class="invalid">Name is required!</p>
+            </div>
+            <div class="form-group">
+                <label for="content">Review</label>
+                <textarea class="form-control" rows=7 name="content" id="content" placeholder="Your review in here!" required #content="ngModel"
+                    [(ngModel)]="review.content"></textarea>
+                <p [hidden]="content.valid || content.pristine" class="invalid">Review is required!</p>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!reviewForm.form.valid" (click)=addCustomerReview()>Save</button>
+        </form>
+    </div>
+</ng-template>

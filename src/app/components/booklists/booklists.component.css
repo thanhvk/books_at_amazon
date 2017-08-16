@@ -1,0 +1,25 @@
+.booklists-wrapper h1 {
+    margin-bottom: 25px;
+}
+
+.book-item {
+    margin-bottom: 25px;
+}
+
+.book-content-wrapper h4 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.book-content-wrapper p {
+    margin: 0;
+}
+
+.book-image-wrapper {
+    width: 40%;
+}
+
+.book-image {
+    width: 100%;
+}
+

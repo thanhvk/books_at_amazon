@@ -1,0 +1,41 @@
+.main-header {
+    background: #232f3e;
+}
+
+.main-header .navbar-default {
+    background: transparent;
+}
+
+.main-header .navbar {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-header {
+    padding: 15px 20px 0 20px;
+}
+
+.navbar-brand {
+    background-image: url("../../../assets/nav-sprite-global_bluebeacon-V3-1x_optimized._CB508625733_.png");
+    background-position: -10px -51px;
+    background-repeat: no-repeat;
+    width: 97px;
+    height: 30px;
+    font-size: 0;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #adadad;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
